@@ -20,19 +20,28 @@ func main() {
 	// ----------------------------------------
 	// Get user input:
 	fmt.Print("Enter a grade: ")
+
 	reader := bufio.NewReader(os.Stdin)
+
 	input, err := reader.ReadString('\n')
 
 	//Fatal function: log a message to the terminal and stop the program.
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println("You typed:", input)
 	// ----------------------------------------
 
 	// ----------------------------------------
 	// Cleanup input number:
 	input = strings.TrimSpace(input)
+
 	grade, err := strconv.ParseFloat(input, 64)
+
+	fmt.Println("grade:", grade)
+	fmt.Println("err:", err)
+
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -41,6 +50,7 @@ func main() {
 	// ----------------------------------------
 	// See if it is a passing grade:
 	var status string
+
 	if grade >= 60 {
 		status = "passing"
 	} else {

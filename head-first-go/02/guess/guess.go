@@ -20,8 +20,11 @@ func main() {
 	// -- -----------------------------------------
 	// Set the random number:
 	seconds := time.Now().Unix()
+
 	rand.Seed(seconds)
+
 	target := rand.Intn(100) + 1
+
 	fmt.Println("I've chosen a random number between 1 and 100.")
 	fmt.Println("Can you guess it?")
 	// -- -----------------------------------------
@@ -33,10 +36,11 @@ func main() {
 
 	// -- -----------------------------------------
 	// Play the game:
-	success := false
+	var success bool = false
 
 	// Start the loop:
 	for guesses := 0; guesses < 10; guesses++ {
+
 		fmt.Println("You have", 10-guesses, "guesses left.")
 		fmt.Print("Make a guess: ")
 
@@ -53,6 +57,7 @@ func main() {
 		// Convert alphanumeric string to integer (Atoi)
 
 		guess, err := strconv.Atoi(input)
+
 		if err != nil {
 			log.Fatal(err)
 		}
