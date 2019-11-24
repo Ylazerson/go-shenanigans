@@ -20,7 +20,10 @@ func main() {
 	fmt.Print("3 : Deutsch\n")
 
 	// -- -----------------------------
-	lang, err := keyboard.GetFloat()
+	var lang float64
+	var err error
+
+	lang, err = keyboard.GetFloat()
 
 	if err != nil {
 		log.Fatal(err)

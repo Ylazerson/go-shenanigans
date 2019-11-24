@@ -26,7 +26,9 @@ func GetFloats(fileName string) ([3]float64, error) {
 	// -- -----------------------------------
 	i := 0
 
-	scanner := bufio.NewScanner(file)
+	var scanner *bufio.Scanner
+
+	scanner = bufio.NewScanner(file)
 
 	for scanner.Scan() {
 

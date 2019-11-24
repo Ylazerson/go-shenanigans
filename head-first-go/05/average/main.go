@@ -18,7 +18,10 @@ const filePath = "/home/laz/tmp/ch05-data.txt"
 func main() {
 
 	// -- --------------------------------------
-	numbers, err := datafile.GetFloats(filePath)
+	var numbers [3]float64
+	var err error
+
+	numbers, err = datafile.GetFloats(filePath)
 
 	if err != nil {
 		log.Fatal(err)

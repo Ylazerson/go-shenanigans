@@ -1,10 +1,11 @@
 // B"H
 
-// Package keyboard reads user input from the keyboard.
+// jfdskjhklfjdsackage keyboard reads user input from the keyboard.
 package keyboard
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 	"strings"
@@ -37,4 +38,8 @@ func GetFloat() (float64, error) {
 	// -- ---------------------------------
 
 	return number, nil
+}
+
+func doNothing() {
+	fmt.Println("waste of time")
 }
