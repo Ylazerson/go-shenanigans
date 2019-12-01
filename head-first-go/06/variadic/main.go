@@ -10,23 +10,19 @@ func showNames(names ...string) {
 
 	fmt.Println("\n showNames is running:")
 
-	for index, value := range names {
-		fmt.Println("index is", index, "- value is", value)
-	}
+	fmt.Println(names)
 
 }
 
 // -- ---------------------------
-// Function with only a variadic parameter:
+// Function with 2 parameters; 1st is string, 2nd is variadic.
 func showCars(carMake string, carModels ...string) {
 
 	fmt.Println("\n showCars is running:")
 
 	fmt.Println("Car make:", carMake)
 
-	for index, value := range carModels {
-		fmt.Println("index is", index, "- value is", value)
-	}
+	fmt.Println(carModels)
 
 }
 
@@ -44,4 +40,5 @@ func main() {
 	var carMake string = "Toyota"
 	carModels := []string{"Sienna", "Corrola"}
 	showCars(carMake, carModels...)
+
 }
