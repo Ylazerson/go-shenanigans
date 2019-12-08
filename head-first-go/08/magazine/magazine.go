@@ -16,6 +16,7 @@ type Employee struct {
 }
 
 type Address struct {
+	id         int
 	Street     string
 	City       string
 	State      string

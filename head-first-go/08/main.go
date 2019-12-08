@@ -11,15 +11,16 @@ import (
 func main() {
 
 	// -- -----------------------------------------------
-	subscriber1 := magazine.Subscriber{Name: "Aman Singh"}
+	subscriber1 := magazine.Subscriber{
+		Name: "Aman Singh",
+		Rate: 67.4,
+	}
 
 	fmt.Println(subscriber1)
 
-	subscriber1.Rate = 50.35
 	subscriber1.Active = true
 
 	subscriber1.Street = "123 Oak St"
-	subscriber1.City = "Omaha"
 	subscriber1.State = "NE"
 	subscriber1.PostalCode = "68111"
 
@@ -28,7 +29,9 @@ func main() {
 	fmt.Println("Street:", subscriber1.Street)
 
 	// -- -----------------------------------------------
-	subscriber2 := magazine.Subscriber{Name: "Rasha B'galui"}
+	var subscriber2 magazine.Subscriber
+
+	subscriber2.Name = "Rasha B'galui"
 
 	fmt.Println(subscriber2)
 
@@ -69,4 +72,6 @@ func main() {
 	fmt.Println("City:", addr.City)
 	fmt.Println("State:", addr.State)
 	fmt.Println("Postal Code:", addr.PostalCode)
+
+	employee.Address = addr
 }
