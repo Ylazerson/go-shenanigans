@@ -15,7 +15,7 @@ func main() {
 	shopList := make(map[string]int)
 
 	shopList["shoes"] = 5
-	shopList["hat"] = 1
+	shopList["hat"] = 2
 	shopList["tie"] = 2
 	shopList["cups"] = 50
 	shopList["cups"] = 75
