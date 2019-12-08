@@ -95,15 +95,11 @@ func main() {
 	// -- -----------------------------------------------
 	fmt.Println("\n Create some magazines")
 
-	var mags []magazine.Magazine
-
 	// --  -  -  -  -  -  -  -  -  -
 	mag1 := magazine.Magazine{
 		MagazineTitle: "Moshiach Time",
 		Price:         5.56,
 	}
-
-	mags = append(mags, mag1)
 
 	// --  -  -  -  -  -  -  -  -  -
 	mag2 := magazine.Magazine{
@@ -111,7 +107,12 @@ func main() {
 		Price:         1.99,
 	}
 
+	// --  -  -  -  -  -  -  -  -  -
+	var mags []magazine.Magazine
+	mags = append(mags, mag1)
 	mags = append(mags, mag2)
+
+	fmt.Println("mags variable:", mags)
 
 	// --  -  -  -  -  -  -  -  -  -
 	subscriber1.Magazines = mags
