@@ -91,4 +91,31 @@ func main() {
 	fmt.Println("\n add addr to employee")
 	employee.Address = addr
 	fmt.Println(employee)
+
+	// -- -----------------------------------------------
+	fmt.Println("\n Create some magazines")
+
+	var mags []magazine.Magazine
+
+	// --  -  -  -  -  -  -  -  -  -
+	mag1 := magazine.Magazine{
+		MagazineTitle: "Moshiach Time",
+		Price:         5.56,
+	}
+
+	mags = append(mags, mag1)
+
+	// --  -  -  -  -  -  -  -  -  -
+	mag2 := magazine.Magazine{
+		MagazineTitle: "Chayenu",
+		Price:         1.99,
+	}
+
+	mags = append(mags, mag2)
+
+	// --  -  -  -  -  -  -  -  -  -
+	subscriber1.Magazines = mags
+
+	fmt.Println(subscriber1)
+
 }

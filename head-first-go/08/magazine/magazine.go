@@ -3,9 +3,10 @@
 package magazine
 
 type Subscriber struct {
-	Name   string
-	Rate   float64
-	Active bool
+	Name      string
+	Rate      float64
+	Active    bool
+	Magazines []Magazine
 	Address
 }
 
@@ -21,4 +22,9 @@ type Address struct {
 	City       string
 	State      string
 	PostalCode string
+}
+
+type Magazine struct {
+	MagazineTitle string
+	Price         float64
 }
