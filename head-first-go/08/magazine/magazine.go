@@ -28,3 +28,13 @@ type Magazine struct {
 	MagazineTitle string
 	Price         float64
 }
+
+func (m *Magazine) ApplyDiscount(discountPct float64) {
+	m.Price = m.Price - (m.Price * discountPct)
+}
+
+func ApplyMagDiscount(m Magazine, discountPct float64) Magazine {
+	m.Price = m.Price - (m.Price * discountPct)
+
+	return m
+}

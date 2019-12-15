@@ -97,9 +97,18 @@ func main() {
 
 	// --  -  -  -  -  -  -  -  -  -
 	mag1 := magazine.Magazine{
-		MagazineTitle: "Moshiach Time",
+		MagazineTitle: "Moshiach Times",
 		Price:         5.56,
 	}
+
+	// --  -  -  -  -  -  -  -  -  -
+	fmt.Println(mag1.Price)
+	mag1.ApplyDiscount(.30)
+	fmt.Println(mag1.Price)
+
+	// --  -  -  -  -  -  -  -  -  -
+	mag1WithDiscount := magazine.ApplyMagDiscount(mag1, .30)
+	fmt.Println(mag1WithDiscount.Price)
 
 	// --  -  -  -  -  -  -  -  -  -
 	mag2 := magazine.Magazine{
