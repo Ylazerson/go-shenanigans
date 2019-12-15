@@ -18,10 +18,29 @@ func (m Milliliters) ToGallons() Gallons {
 
 func main() {
 
-	soda := Liters(2)
-	fmt.Printf("%0.3f liters equals %0.3f gallons\n", soda, soda.ToGallons())
+	// -- --------------------------------------
+	var soda Liters
+	var water Milliliters
 
-	water := Milliliters(500)
-	fmt.Printf("%0.3f milliliters equals %0.3f gallons\n", water, water.ToGallons())
+	soda = Liters(2)
+	water = Milliliters(500)
+
+	// -- --------------------------------------
+	fmt.Println("Soda:", soda)
+	fmt.Println("Water:", water)
+
+	fmt.Println("Soda + float64:", soda+2.5)
+
+	// -- --------------------------------------
+	var sodaGallons Gallons
+	sodaGallons = soda.ToGallons()
+
+	fmt.Println("sodaGallons", sodaGallons)
+
+	// -- --------------------------------------
+	var waterGallons Gallons
+	waterGallons = water.ToGallons()
+
+	fmt.Println("waterGallons", waterGallons)
 
 }
