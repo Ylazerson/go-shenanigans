@@ -19,11 +19,11 @@ func main() {
 
 	// -- -----------------------------------------
 	// Set the random number:
-	seconds := time.Now().Unix()
+	var seconds int64 = time.Now().Unix()
 
 	rand.Seed(seconds)
 
-	target := rand.Intn(100) + 1
+	var target int = rand.Intn(100) + 1
 
 	fmt.Println("I've chosen a random number between 1 and 100.")
 	fmt.Println("Can you guess it?")

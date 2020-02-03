@@ -37,8 +37,14 @@ func main() {
 	showCars("Ford", "F150")
 	showCars("Ferrari")
 
+	// -- -------------------------------------
 	var carMake string = "Toyota"
 	carModels := []string{"Sienna", "Corrola"}
+
+	// Approach 1:
 	showCars(carMake, carModels...)
+
+	// Approach 2:
+	showCars("Toyota", "Sienna", "Corrola")
 
 }

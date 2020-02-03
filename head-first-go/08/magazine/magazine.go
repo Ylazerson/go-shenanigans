@@ -29,10 +29,12 @@ type Magazine struct {
 	Price         float64
 }
 
+// Method:
 func (m *Magazine) ApplyDiscount(discountPct float64) {
 	m.Price = m.Price - (m.Price * discountPct)
 }
 
+// Function:
 func ApplyMagDiscount(m Magazine, discountPct float64) Magazine {
 	m.Price = m.Price - (m.Price * discountPct)
 

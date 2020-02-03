@@ -107,7 +107,10 @@ func main() {
 	fmt.Println(mag1.Price)
 
 	// --  -  -  -  -  -  -  -  -  -
-	mag1WithDiscount := magazine.ApplyMagDiscount(mag1, .30)
+	var mag1WithDiscount magazine.Magazine
+
+	mag1WithDiscount = magazine.ApplyMagDiscount(mag1, .30)
+
 	fmt.Println(mag1WithDiscount.Price)
 
 	// --  -  -  -  -  -  -  -  -  -

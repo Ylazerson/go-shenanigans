@@ -43,6 +43,7 @@ func average(numbers ...float64) float64 {
 func main() {
 
 	// Get the command-line args:
+	// fmt.Println(os.Args)
 	arguments := os.Args[1:]
 
 	var numbers []float64
