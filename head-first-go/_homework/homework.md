@@ -4,6 +4,7 @@
 - Review Go basics in `02/guess`
 
 - Review ***pointers*** in `03/pointers03`
+    - Note, in general, **DO NOT** use pointers unless it is really really needed!!!
 
 - Review ***packages*** in `04/hi`
 

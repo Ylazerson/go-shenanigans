@@ -1,5 +1,14 @@
 // B"H
 
+/*
+-- --------------------------------
+Note, in general, DO NOT use pointers inless it is really really needed!!!
+
+See "Go Pointers: When to Use Pointers" article by Kent Rancourt
+- https://medium.com/@kent.rancourt/go-pointers-when-to-use-pointers-4f29256ddff3
+-- --------------------------------
+*/
+
 package main
 
 import (
