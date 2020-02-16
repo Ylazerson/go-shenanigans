@@ -23,7 +23,7 @@ func TryOutGadget(player Player) {
 	player.Stop()
 
 	// -- ---------------------------------
-	// 99% if time you won't need this:
+	// 99.99% if time you won't need this:
 	// type assertion:
 	recorder, ok := player.(gadget.TapeRecorder)
 
@@ -37,17 +37,35 @@ func TryOutGadget(player Player) {
 func main() {
 
 	// -- ---------------------------------
+	// Create/set a TapePlayer struct:
 	var tPlayer gadget.TapePlayer
 	tPlayer.Batteries = "Duracell"
 
+	// -- ---------------------------------
 	tryOutTapePlayer(tPlayer)
 
 	// -- ---------------------------------
+	// Create/set a TapeRecorder struct:
 	var tRecorder gadget.TapeRecorder
 	tRecorder.Microphones = 2
 
 	// -- ---------------------------------
+	// Works:
 	TryOutGadget(tPlayer)
 	TryOutGadget(tRecorder)
+
+	// -- ---------------------------------
+	var ancientPlayer gadget.NoStopPlayer
+	ancientPlayer.Eyeballs = "Brown"
+
+	// Won't work:
+	// TryOutGadget(ancientPlayer)
+
+	// -- ---------------------------------
+	var oddPlayer gadget.OddPlayer
+	oddPlayer.Batteries = "AA"
+
+	// Won't work:
+	// TryOutGadget(oddPlayer)
 
 }

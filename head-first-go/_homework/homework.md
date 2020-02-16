@@ -18,3 +18,14 @@
 
 - Review ***types***, ***methods***, and ***pointers*** in `09/volumes.go`
 
+---
+
+**Interfaces**
+- **Program to an interface not an implementation.**
+
+- Review *creating* your own ***interfaces*** in `11/11b` 
+
+- Review *utlizing* ***interfaces*** in `11/11e`    
+
+- Review ***Empty Interfaces*** in `11/11f`
+    - Note, in practice, we will very very rarely create our own code that uses empty interfaces. 

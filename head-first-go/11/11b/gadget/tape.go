@@ -5,13 +5,6 @@ package gadget
 import "fmt"
 
 // -- -------------------------------------
-/*
-TapePlayer struct
-    str   : Batteries string
-    method: func (t TapePlayer) Play(song string)
-    method: func (t TapePlayer) Stop()
-*/
-// -- -------------------------------------
 type TapePlayer struct {
 	Batteries string
 }
@@ -24,14 +17,6 @@ func (t TapePlayer) Stop() {
 	fmt.Println("Stopped!")
 }
 
-// -- -------------------------------------
-/*
-TapeRecorder struct
-    int   : Microphones int
-    method: func (t TapeRecorder) Play(song string)
-    method: func (t TapeRecorder) Stop()
-    method: func (t TapeRecorder) Record()
-*/
 // -- -------------------------------------
 type TapeRecorder struct {
 	Microphones int
@@ -46,5 +31,31 @@ func (t TapeRecorder) Record() {
 }
 
 func (t TapeRecorder) Stop() {
+	fmt.Println("Stopped!")
+}
+
+// -- -------------------------------------
+// Won't satisfy the interface.
+// -- -------------------------------------
+type NoStopPlayer struct {
+	Eyeballs string
+}
+
+func (t NoStopPlayer) Play(song string) {
+	fmt.Println("Playing", song)
+}
+
+// -- -------------------------------------
+// Won't satisfy the interface.
+// -- -------------------------------------
+type OddPlayer struct {
+	Batteries string
+}
+
+func (t OddPlayer) Play(song int64) {
+	fmt.Println("Playing song number", song)
+}
+
+func (t OddPlayer) Stop() {
 	fmt.Println("Stopped!")
 }
