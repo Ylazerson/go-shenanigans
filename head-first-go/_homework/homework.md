@@ -29,3 +29,6 @@
 
 - Review ***Empty Interfaces*** in `11/11f`
     - Note, in practice, we will very very rarely create our own code that uses empty interfaces. 
+
+- Review `11/11g-func-types` where we declare a **function signature** as a **type**.
+    - This is similar to an interface.    
