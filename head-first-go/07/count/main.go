@@ -19,7 +19,7 @@ func main() {
 	// -- --------------------------------------
 	// Make-beleive config settings:
 	configSettings := make(map[string]string)
-	configSettings["username"] = "barky"
+	configSettings["username"] = "zak"
 	configSettings["password"] = "please1234"
 	configSettings["server-ip"] = "127.0.0.1"
 
